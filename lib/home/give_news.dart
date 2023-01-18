@@ -90,31 +90,32 @@ class _GiveNewsState extends State<GiveNews> {
               height: 20,
             ),
             ElevatedButton(
-                onPressed: (() async {
-                  if (_formKey.currentState!.validate()) {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return const CupertinoAlertDialog(
-                          title: Text('Please waiting'),
-                          content: Center(
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: 40),
-                              child: CupertinoActivityIndicator(
-                                radius: 20,
-                                color: Colors.blue,
-                              ),
+              onPressed: (() async {
+                if (_formKey.currentState!.validate()) {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return const CupertinoAlertDialog(
+                        title: Text('Please waiting'),
+                        content: Center(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(vertical: 40),
+                            child: CupertinoActivityIndicator(
+                              radius: 20,
+                              color: Colors.blue,
                             ),
                           ),
-                        );
-                      },
-                    );
-                    await addNews();
-                    // ignore: use_build_context_synchronously
-                    Navigator.popUntil(context, (route) => route.isFirst);
-                  }
-                }),
-                child: const Icon(Icons.publish))
+                        ),
+                      );
+                    },
+                  );
+                  await addNews();
+                  // ignore: use_build_context_synchronously
+                  Navigator.popUntil(context, (route) => route.isFirst);
+                }
+              }),
+              child: const Icon(Icons.publish),
+            ),
           ],
         ),
       ),

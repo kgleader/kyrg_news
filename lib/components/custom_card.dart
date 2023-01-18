@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../theme/app_colors.dart';
 import '../theme/app_text_style.dart';
 
@@ -27,7 +28,7 @@ class CustomCard extends StatelessWidget {
             color: AppColors.iconColor,
           ),
           const SizedBox(width: 8),
-          Text(text, style: AppTextStyle.CardTextStyles),
+          Text(text, style: AppTextStyle.dardTextStyles),
         ],
       ),
     );

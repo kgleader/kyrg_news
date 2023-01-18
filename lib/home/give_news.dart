@@ -6,7 +6,7 @@ import '../components/custom_text_field.dart';
 import '../models/news_model.dart';
 
 class GiveNews extends StatefulWidget {
-  GiveNews({super.key});
+  const GiveNews({super.key});
 
   @override
   State<GiveNews> createState() => _GiveNewsState();
@@ -49,7 +49,7 @@ class _GiveNewsState extends State<GiveNews> {
               hintext: 'title',
               controller: _title,
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value.isEmpty) {
                   return 'Please enter author text';
                 }
                 return null;
@@ -67,7 +67,7 @@ class _GiveNewsState extends State<GiveNews> {
               controller: _descr,
               maxlines: 10,
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value.isEmpty) {
                   return 'Please enter author text';
                 }
                 return null;
@@ -80,7 +80,7 @@ class _GiveNewsState extends State<GiveNews> {
               hintext: 'author',
               controller: _author,
               validator: (value) {
-                if (value == null || value.isEmpty) {
+                if (value.isEmpty) {
                   return 'Please enter author text';
                 }
                 return null;
@@ -110,6 +110,7 @@ class _GiveNewsState extends State<GiveNews> {
                       },
                     );
                     await addNews();
+                    // ignore: use_build_context_synchronously
                     Navigator.popUntil(context, (route) => route.isFirst);
                   }
                 }),

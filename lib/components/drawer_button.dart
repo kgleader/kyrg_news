@@ -29,7 +29,7 @@ class DrawerButton extends StatelessWidget {
           const SizedBox(width: 40), // icon
           Text(
             text,
-            style: AppTextStyle.DrawerTextStyle,
+            style: AppTextStyle.drawerTextStyle,
           ), // text
         ],
       ),

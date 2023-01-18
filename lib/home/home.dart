@@ -14,7 +14,6 @@ class NewsView extends StatefulWidget {
 }
 
 class _NewsViewState extends State<NewsView> {
-  final _Formkey = GlobalKey<FormState>();
   final _title = TextEditingController();
   final _description = TextEditingController();
   final _author = TextEditingController();
@@ -127,7 +126,7 @@ class _NewsViewState extends State<NewsView> {
                       child: ListTile(
                         onTap: (() {}),
                         leading: const Image(
-                            image: AssetImage('assets/images/googleImage.jpg')),
+                            image: AssetImage('assets/images/robotic.jpg')),
                         title: Text(
                             'Google корпорациясы дүйнөдө болуп көрбөгөндөй технология чыгарды $index'),
                         subtitle: const Text('17.12.2022 | көрүүчү:1950'),

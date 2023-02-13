@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
+import '../theme/app_colors.dart';
 import '../theme/app_text_style.dart';
 
-class DrawerButton extends StatelessWidget {
-  const DrawerButton({
+class CustomCard extends StatelessWidget {
+  const CustomCard({
     Key? key,
     required this.icon,
     required this.text,
@@ -16,21 +16,18 @@ class DrawerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      highlightColor: Colors.blue, // splash color
-      onTap: onTap, // button pressed
+      highlightColor: AppColors.buttonColor,
+      onTap: onTap,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Icon(
             icon,
-            size: 28,
-            color: const Color.fromARGB(255, 2, 152, 7),
+            size: 20,
+            color: AppColors.iconColor,
           ),
-          const SizedBox(width: 40), // icon
-          Text(
-            text,
-            style: AppTextStyle.drawerTextStyle,
-          ), // text
+          const SizedBox(width: 8),
+          Text(text, style: AppTextStyle.cardTextStyles),
         ],
       ),
     );

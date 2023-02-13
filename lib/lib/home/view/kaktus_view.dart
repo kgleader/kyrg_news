@@ -4,16 +4,17 @@ import '../../components/custom_card.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_text.dart';
 import '../../theme/app_text_style.dart';
+import 'for_administrator_login_page.dart';
 
-class KyrgyzNewsMedia extends StatefulWidget {
-  const KyrgyzNewsMedia({super.key, this.onPressed});
+class KaktusMedia extends StatefulWidget {
+  const KaktusMedia({super.key, this.onPressed});
 
   final void Function()? onPressed;
   @override
-  State<KyrgyzNewsMedia> createState() => _KyrgyzNewsMediaState();
+  State<KaktusMedia> createState() => _KaktusMediaState();
 }
 
-class _KyrgyzNewsMediaState extends State<KyrgyzNewsMedia> {
+class _KaktusMediaState extends State<KaktusMedia> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +55,7 @@ class _KyrgyzNewsMediaState extends State<KyrgyzNewsMedia> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
-                    Text(AppText.media, style: AppTextStyle.appBarTextStyles),
+                    Text(AppText.media, style: AppTextStyle.mediaTextStyle),
                     Text(
                       AppText.versio,
                       style: AppTextStyle.versioTextStyle,
@@ -88,6 +89,17 @@ class _KyrgyzNewsMediaState extends State<KyrgyzNewsMedia> {
               onTap: () {},
             ),
             const SizedBox(height: 14),
+            CustomCard(
+              icon: Icons.admin_panel_settings_outlined,
+              text: AppText.administrator,
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) =>
+                            const AdministratorLoginPage())));
+              },
+            ),
           ],
         ),
       ),

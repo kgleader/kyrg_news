@@ -18,6 +18,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      // controller:,
       maxLines: maxlines,
       onTap: onTap,
       decoration: InputDecoration(

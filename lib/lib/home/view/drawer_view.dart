@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kgz_news/theme/app_colors.dart';
-
 import '../../components/drawer_button.dart';
+import '../../theme/app_colors.dart';
 import '../../theme/app_text.dart';
-import 'kyrgyz_news_media.dart';
+import 'kaktus_view.dart';
 
 class DriwerVidget extends StatelessWidget {
   const DriwerVidget({
@@ -42,13 +41,13 @@ class DriwerVidget extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (BuildContext context) =>
-                                      const KyrgyzNewsMedia()));
+                                      const KaktusMedia()));
                         },
                       ),
                     ],
                   ),
                   decoration:
-                      const BoxDecoration(color: AppColors.backgroundColor),
+                      const BoxDecoration(color: AppColors.forAppColorGreen),
                 ),
               ),
             ]));

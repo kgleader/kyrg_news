@@ -15,8 +15,8 @@ class FirstPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.start),
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: ((context) => GiveNews())));
+          Navigator.push(context,
+              MaterialPageRoute(builder: ((context) => const GiveNews())));
         },
       ),
     );

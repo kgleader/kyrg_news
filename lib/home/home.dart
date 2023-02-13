@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:kgz_news/lib/home/view/drawer_view.dart';
+import 'package:kgz_news/home/view/drawer_view.dart';
 import '../models/news_model.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_style.dart';

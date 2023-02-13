@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton({
+  const CustomButton({
     Key? key,
     required this.text,
     this.onPressed,
@@ -12,7 +12,6 @@ class CustomButton extends StatelessWidget {
   final void Function()? onPressed;
   final Color? backgroundColor;
   final double borderRadius;
-  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 
+// ignore: camel_case_types
 class userRegister {
   /*
    Колдонуучудан почтасын жана паролун алып файрбейзке жүктөө керек.
